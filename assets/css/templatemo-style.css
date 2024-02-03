@@ -333,6 +333,7 @@ html {
     float:left;
 }
 .right-col{
+    text-align: left;
     width: 80%;
     height: 300px;
     float:right;
