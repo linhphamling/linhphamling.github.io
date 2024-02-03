@@ -330,10 +330,12 @@ html {
 .left-col{
     width: 20%;
     height: 300px;
+    float:left;
 }
 .right-col{
     width: 20%;
     height: 300px;
+    float:right;
 }
 
 /* Buttons */
