@@ -295,7 +295,7 @@ html {
 }
 
 .section-heading {
-    text-align: left;
+    text-align: center;
     padding: 80px 45px;
 }
 
@@ -313,6 +313,7 @@ html {
 }
 
 .section-heading span {
+    text-align: center;
     margin-top: 5px;
     font-size: /*16*/17px;
     color: #fff;
