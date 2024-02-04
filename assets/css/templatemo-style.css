@@ -329,13 +329,13 @@ html {
 /* Column*/
 .left-col{
     width: 20%;
-    height: auto;
+    height: 120;
     float:left;
 }
 .right-col{
     text-align: left;
     width: 80%;
-    height: auto;
+    height: 120;
     float:right;
 }
 
