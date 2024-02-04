@@ -338,6 +338,17 @@ html {
     height: 120px;
     float:right;
 }
+#post{
+    width: 20%;
+    height:60px;
+    float:left;
+}
+#sidebar{
+    text-align: left;
+    width: 80%;
+    height: 60px;
+    float:right;
+}
 
 .clear { clear: both }
 /* Buttons */
