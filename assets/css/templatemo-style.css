@@ -329,18 +329,19 @@ html {
 /* Column*/
 .left-col{
     width: 20%;
-    
+    height: auto;
     float:left;
 }
 .right-col{
     text-align: left;
     width: 80%;
-    
+    height: auto;
     float:right;
 }
 #post{
     width: 20%;
     height: 60px;
+    height: auto;
     float:left;
 }
 #sidebar{
