@@ -25,3 +25,14 @@ function renderTwoCol(items, mountId){
 
 renderTwoCol(talks, 'talks');
 renderTwoCol(grants, 'grants-grid');
+
+// Mobile nav toggle
+const navBtn = document.querySelector('.nav-toggle');
+const navEl  = document.getElementById('site-nav');
+if (navBtn && navEl) {
+  navBtn.addEventListener('click', () => {
+    const open = navEl.classList.toggle('open');
+    navBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+}
+
