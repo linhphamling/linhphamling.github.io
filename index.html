@@ -15,9 +15,15 @@
   <div class="container header-inner">
     <div class="identity">
       <h1>Linh Pham</h1>
-      <p>PhD student • Psycholinguistics • USC</p>
+      <p class="tagline">PhD student • Psycholinguistics • USC</p>
     </div>
-    <nav class="nav">
+
+    <!-- Nút mở/đóng menu trên mobile -->
+    <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">
+      &#9776;
+    </button>
+
+    <nav id="site-nav" class="nav">
       <a href="#about">About</a>
       <a href="#publications">Publications</a>
       <a href="#presentations">Presentations</a>
