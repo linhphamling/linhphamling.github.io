@@ -5,6 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Linh Pham — Academic CV</title>
 <link rel="stylesheet" href="style.css">
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<!-- Academicons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons/css/academicons.min.css">
 </head>
 <body>
 <header class="site-header">
@@ -24,51 +28,70 @@
 </header>
 
 <main class="container">
-  <section id="about" style="display:flex; gap:40px; align-items:flex-start;">
-    <!-- Cột trái -->
-    <div style="flex:1; text-align:center;">
-      <img src="images/avatar.jpg" alt="Profile photo" style="width:150px; border-radius:50%;">
-      <h2>Linh Pham</h2>
-      <p><strong>4th year PhD student</strong><br>University of Southern California</p>
-      <div>
-        <a href="#">📧</a> <a href="#">🌐</a> <a href="#">🔗</a>
+  <section id="about" style="display:flex; gap:40px; align-items:flex-start; flex-wrap:wrap;">
+      <!-- Cột trái -->
+      <div style="flex:1; text-align:center; min-width:250px;">
+        <img src="images/avatar.jpg" alt="Profile photo" style="width:150px; border-radius:50%;">
+        <h2 style="margin-top:15px;">Linh Pham</h2>
+        <p><strong>4th year PhD student</strong><br>University of Southern California</p>
+        
+        <!-- Social Media Icons -->
+        <div style="margin:15px 0; font-size:1.5rem;">
+          <a href="mailto:llpham@usc.edu" title="Email" style="margin:0 8px; color:#333;"><i class="fa-solid fa-envelope"></i></a>
+          <a href="https://x.com/NhatLinhNalin" title="Twitter / X" style="margin:0 8px; color:#333;"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="https://www.instagram.com/plnhatlinh" title="Instagram" style="margin:0 8px; color:#333;"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/in/linhpham13/" title="LinkedIn" style="margin:0 8px; color:#333;"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="https://scholar.google.com/citations?user=b5mth0MAAAAJ&hl=vi" title="Google Scholar" style="margin:0 8px; color:#333;"><i class="ai ai-google-scholar"></i></a>
+          <a href="https://orcid.org/0000-0002-3634-8792" title="ORCID" style="margin:0 8px; color:#333;"><i class="ai ai-orcid"></i></a>
+        </div>
+  
+        <!-- Nút Download CV -->
+        <a href="cv.pdf" class="btn" style="display:inline-block; padding:10px 20px; background:#000; color:#fff; text-decoration:none; border-radius:5px; margin-top:10px;">
+          <i class="fa-solid fa-download" style="margin-right:5px;"></i>Download CV
+        </a>
       </div>
-      <a href="cv.pdf" class="btn">Download CV</a>
-    </div>
-  
-    <!-- Cột phải -->
-    <div style="flex:2;">
-      <h2>About Me</h2>
-      <p>
-        Hi! My name is Pham Le Nhat Linh (I love it when people call me Nhat Linh /ɲət lɪŋ/). I'm a third year PhD student studying <a href="https://dornsife.usc.edu/ling/" target="_blank">
-              linguistics</a>  at
-              <a href="https://www.usc.edu/" target="_blank"> The University of Southern California  (USC)</a>, where I am supervised by <a href="https://elsikaiser.com" target="_blank">
-              Professor Elsi Kaiser</a>.<br><br>
-              My main research area is psycholinguistics with a focus on sentence processing. Specific topics I am currently working on and am interested in are similarity-interference in wh-constructions, anaphora resolutions and encoding interference.<br><br>
-              I have started to learn and do research in bilingualism. I am interested in the shared-syntactic models in bilingual language processing.<br><br>
-              Pursuing equality in education is another major mission in my life. Thus, I am operating social projects to provide education to underpriviledged groups –<a href="https://www.facebook.com/DaffodilsEduProject" target="_blank">
-              Daffodils Education Project</a><br><br>
-              When I’m not doing linguistics or education, I love singing (you can check my channel<a href="https://soundcloud.com/l-nh-t-linh-ph-m" target="_blank">
-              HERE</a>), and taking pictures of the sun, the sky and the stars.
-      </p>
-  
-      <h3>Interests</h3>
-      <ul>
-        <li>Psycholinguistics</li>
-        <li>Bilingualism/ Multilingualism</li>
-        <li>Computational linguistics</li>
-      </ul>
-  
-      <h3>Education</h3>
-      <ul>
-        <li><strong>PhD in Linguistics</strong> (2022 - Present) — University of Southern California, USA</li>
-        <li><strong>M.A. in Linguistics</strong> (2024) — University of Southern California, USA</li>
-        <li><strong>BSc Teaching English as a Foreign Language</strong> — Ho Chi Minh City University of Education, Vietnam</li>
-        <li><strong>Certificate of Pedagogical Training</strong> — Hue University of Education, Vietnam</li>
-      </ul>
-    </div>
+    
+      <!-- Cột phải -->
+      <div style="flex:2; min-width:300px;">
+        <h2>About Me</h2>
+        <p>
+          Hi! My name is Pham Le Nhat Linh (I love it when people call me Nhat Linh /ɲət lɪŋ/). I'm a 4th year PhD student studying 
+          <a href="https://dornsife.usc.edu/ling/" target="_blank">linguistics</a> at
+          <a href="https://www.usc.edu/" target="_blank">The University of Southern California (USC)</a>, 
+          where I am supervised by <a href="https://elsikaiser.com" target="_blank">Professor Elsi Kaiser</a>.
+        </p>
+        <p>
+          My main research area is psycholinguistics with a focus on sentence processing. Specific topics I am currently working on and interested in are similarity-interference in wh-constructions, anaphora resolutions, and encoding interference.
+        </p>
+        <p>
+          I have started to learn and do research in bilingualism, particularly the shared-syntactic models in bilingual language processing.
+        </p>
+        <p>
+          Pursuing equality in education is another major mission in my life. Thus, I am operating social projects to provide education to underprivileged groups –
+          <a href="https://www.facebook.com/DaffodilsEduProject" target="_blank">Daffodils Education Project</a>.
+        </p>
+        <p>
+          When I’m not doing linguistics or education, I love singing 
+          (<a href="https://soundcloud.com/l-nh-t-linh-ph-m" target="_blank">check my channel here</a>) 
+          and taking pictures of the sun, the sky, and the stars.
+        </p>
+    
+        <h3>Interests</h3>
+        <ul>
+          <li>Psycholinguistics</li>
+          <li>Bilingualism / Multilingualism</li>
+          <li>Computational Linguistics</li>
+        </ul>
+    
+        <h3>Education</h3>
+        <ul>
+          <li><strong>PhD in Linguistics</strong> (2022 - Present) — University of Southern California, USA</li>
+          <li><strong>M.A. in Linguistics</strong> (2024) — University of Southern California, USA</li>
+          <li><strong>BSc Teaching English as a Foreign Language</strong> — Ho Chi Minh City University of Education, Vietnam</li>
+          <li><strong>Certificate of Pedagogical Training</strong> — Hue University of Education, Vietnam</li>
+        </ul>
+      </div>
   </section>
-
 
   <section id="publications" class="card">
     <h2>Publications</h2>
