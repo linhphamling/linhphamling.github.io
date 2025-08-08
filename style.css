@@ -42,3 +42,30 @@ a:hover{text-decoration:underline}
 }
 .labelled dt{margin:0;font-style:italic;color:var(--muted)}
 .labelled dd{margin:0}
+
+/* ========== Header base (desktop) ========== */
+.site-header{position:sticky;top:0;background:rgba(15,20,35,.8);backdrop-filter:saturate(180%) blur(6px);z-index:50}
+@media (prefers-color-scheme: light){ .site-header{background:#fff} }
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+.identity h1{margin:0;font-size:22px}
+.identity .tagline{margin:2px 0 0;color:var(--muted);font-size:14px}
+
+/* Nút hamburger ẩn trên desktop */
+.nav-toggle{display:none;border:0;background:transparent;font-size:28px;line-height:1;padding:6px;margin-left:auto;cursor:pointer}
+
+/* ========== Mobile styles ========== */
+@media (max-width: 720px){
+  .header-inner{flex-wrap:wrap;gap:8px}
+  .identity{flex:1 0 100%;text-align:center}
+  .identity h1{font-size:24px}
+  .identity .tagline{font-size:13px}
+
+  .nav-toggle{display:block}   /* hiện nút ☰ trên mobile */
+
+  /* Menu đóng mặc định */
+  .nav{display:none;flex-basis:100%;flex-direction:column;align-items:center;gap:10px;padding:8px 0}
+  .nav a{font-size:18px}
+
+  /* Khi mở */
+  .nav.open{display:flex}
+}
