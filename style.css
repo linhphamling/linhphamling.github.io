@@ -27,3 +27,18 @@ a:hover{text-decoration:underline}
 .twocol .date{color:var(--muted); font-weight:600; white-space:nowrap}
 .twocol .text{min-width:0}
 .footer{color:var(--muted); padding:28px 0; text-align:center}
+
+/* Teaching block */
+.role{margin:0 0 2px;font-weight:700}
+.role a{color:inherit;text-decoration:underline}
+.org{color:var(--muted);margin-bottom:6px}
+
+/* Bảng nhãn 2 cột trong phần mô tả */
+.labelled{
+  display:grid;
+  grid-template-columns: 180px 1fr;  /* cột nhãn | cột nội dung */
+  gap:6px 12px;
+  margin:8px 0 2px;
+}
+.labelled dt{margin:0;font-style:italic;color:var(--muted)}
+.labelled dd{margin:0}
