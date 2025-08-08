@@ -69,3 +69,11 @@ a:hover{text-decoration:underline}
   /* Khi mở */
   .nav.open{display:flex}
 }
+
+/* Căn đều 2 bên cho nội dung About Me (chỉ cột phải) */
+.about-text p{
+  text-align: justify;
+  text-justify: inter-word;   /* phân bố khoảng trắng hợp lý */
+  hyphens: auto;              /* tự ngắt từ cho mobile nếu cần */
+  line-height: 1.7;           /* đọc dễ hơn */
+}
