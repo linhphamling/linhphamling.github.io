@@ -9,6 +9,55 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <!-- Academicons -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons/css/academicons.min.css">
+<style>
+/* ===== Visual polish (loads after style.css; delete this block to undo) ===== */
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+:root{--pl-line:rgba(128,128,128,.25);--pl-muted:.68}
+
+/* photo */
+#about img{border:3px solid var(--pl-line);box-shadow:0 6px 22px rgba(0,0,0,.28)}
+
+/* social icons: even round buttons */
+#about div[style*="font-size:1.5rem"]{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;font-size:1.1rem !important}
+#about div[style*="font-size:1.5rem"] a{margin:0 !important;width:40px;height:40px;display:inline-flex;align-items:center;justify-content:center;
+  border:1px solid var(--pl-line);border-radius:50%;color:inherit !important;opacity:.85;text-decoration:none;transition:transform .15s,opacity .15s,border-color .15s}
+#about div[style*="font-size:1.5rem"] a:hover{transform:translateY(-2px);opacity:1;border-color:currentColor}
+
+/* CV button */
+#about a.btn{border:1px solid var(--pl-line);box-shadow:0 2px 8px rgba(0,0,0,.25);transition:transform .15s,box-shadow .15s;font-weight:600;letter-spacing:.02em}
+#about a.btn:hover{transform:translateY(-2px);box-shadow:0 6px 16px rgba(0,0,0,.35)}
+
+/* headings */
+.card h2{padding-bottom:12px;margin-bottom:18px;border-bottom:1px solid var(--pl-line)}
+#publications h3{font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;opacity:var(--pl-muted);margin:28px 0 10px}
+#about-text h3,.about-text h3{margin-top:22px}
+
+/* links */
+main a{transition:opacity .15s}
+main a:hover{text-decoration:underline;text-underline-offset:3px}
+
+/* publications */
+.pub-list{padding-left:1.4em}
+.pub-list li{padding:0 0 14px 4px;margin:0 0 14px;border-bottom:1px solid var(--pl-line);line-height:1.6}
+.pub-list li:last-child{border-bottom:0;margin-bottom:0;padding-bottom:0}
+.pub-title{font-weight:700}
+.pub-venue{opacity:var(--pl-muted)}
+.pub-link{display:inline-block;margin-left:8px;padding:1px 10px;font-size:.75rem;font-weight:600;border:1px solid currentColor;border-radius:999px;text-decoration:none;white-space:nowrap;vertical-align:1px}
+.pub-link:hover{text-decoration:none;background:rgba(128,128,128,.18)}
+
+/* date / text rows (talks, grants, teaching, service) */
+.twocol{row-gap:0}
+.twocol > .date,.twocol > .text{padding:14px 0;border-bottom:1px solid var(--pl-line)}
+.twocol > :nth-last-child(-n+2){border-bottom:0}
+.twocol > .date{font-weight:600;font-size:.9rem;opacity:var(--pl-muted)}
+.twocol > .text{line-height:1.6}
+dl.labelled dt{font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;opacity:var(--pl-muted);margin-top:8px}
+dl.labelled dd{margin:2px 0 4px}
+@media (max-width:640px){
+  .twocol > .date{border-bottom:0;padding-bottom:0}
+  .twocol > .text{padding-top:4px}
+}
+</style>
 </head>
 <body>
 <header class="site-header">
@@ -245,21 +294,21 @@ const grants = [["June 2026", "<em>Research Development Award</em> — Universit
 </script>
 <script src="script.js"></script>
 <script>
-/* Fallback renderer: fills the lists from the data above if script.js did not (missing, cached, or errored). */
+/* Renderer: builds the lists from the data above (runs after script.js so the format is consistent). */
 (function(){
+  var ME=/(Linh Pham|L\. ?L\. ?N\. Pham|Pham, L\. ?L\. ?N\.)/g;
   function fill(){
     try{
       function pubs(id, arr){
-        var el=document.getElementById(id);
-        if(!el||el.children.length) return;
+        var el=document.getElementById(id); if(!el) return;
         el.innerHTML=arr.map(function(p){
-          return '<li>'+p.authors+' ('+p.year+'). '+p.title+'. <em>'+p.venue+'</em>.'+
-                 (p.doi?' <a href="'+p.doi+'" target="_blank" rel="noopener">[link]</a>':'')+'</li>';
+          var a=p.authors.replace(ME,'<strong>$1</strong>');
+          return '<li>'+a+' ('+p.year+'). <span class="pub-title">'+p.title+'</span>. <em class="pub-venue">'+p.venue+'</em>.'+
+                 (p.doi?' <a class="pub-link" href="'+p.doi+'" target="_blank" rel="noopener">DOI / Link &#8599;</a>':'')+'</li>';
         }).join('');
       }
       function rows(id, arr){
-        var el=document.getElementById(id);
-        if(!el||el.children.length) return;
+        var el=document.getElementById(id); if(!el) return;
         el.innerHTML=arr.map(function(r){
           return '<div class="date">'+r[0]+'</div><div class="text">'+r[1]+'</div>';
         }).join('');
